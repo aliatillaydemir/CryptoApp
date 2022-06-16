@@ -1,4 +1,4 @@
-package com.ayd.cryptoapp
+package com.ayd.cryptoapp.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -18,7 +18,6 @@ import androidx.navigation.navArgument
 import com.ayd.cryptoapp.ui.theme.CryptoAppTheme
 import com.ayd.cryptoapp.view.CryptoDetailScreen
 import com.ayd.cryptoapp.view.CryptoListScreen
-import com.ayd.cryptoapp.viewmodel.CryptoListViewModel
 import com.ayd.cryptoapp.viewmodel.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -54,11 +53,12 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = "cryptoListScreen") {
 
                     composable("cryptoListScreen") {
-                        //crytplistscreen
+                        //crytplistscreen ana sayfamız olacak
                         CryptoListScreen(navController = navController)
 
                     }
 
+                    //cryptoDetail sayfasına buradan iki veri gönderecegiz. criptonun id ve ucreti.
                     composable("cryptoDetailScreen/{cryptoId}/{cryptoPrices}", arguments = listOf(
                         navArgument("cryptoId") {
                             type = NavType.StringType
@@ -69,7 +69,7 @@ class MainActivity : ComponentActivity() {
 
 
                     )) {
-                        val cryptoId = remember {
+                        val cryptoId = remember {  //cryptoDetailScreen composable'ına gelindiginde cryptoListScreen'deki argumanlar degisken olarak verilir.
                             it.arguments?.getString("cryptoId")
                         }
 

@@ -1,4 +1,4 @@
-package com.ayd.cryptoapp
+package com.ayd.cryptoapp.main
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

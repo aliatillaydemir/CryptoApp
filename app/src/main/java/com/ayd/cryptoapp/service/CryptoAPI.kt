@@ -12,7 +12,7 @@ interface CryptoAPI {
         @Query("key") key: String
     ) : CryptoList
 
-
+//spesifik özellikler endpoint için buradan alınıyor.
     @GET("currencies/ticker")
     suspend fun getCrypto(
         @Query("key") key: String,

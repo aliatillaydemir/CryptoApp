@@ -26,7 +26,7 @@ class CryptoListViewModel @Inject constructor(
     var errorMes = mutableStateOf("")
     var isload = mutableStateOf(false)
 
-    private var initialCryptoList = listOf<CryptoListItem>()
+    private var initialCryptoList = listOf<CryptoListItem>() //her seferide yeniden download etmemek için, istediğimizde silebilirzi.
     private var isSearchStart = true
 
     init {

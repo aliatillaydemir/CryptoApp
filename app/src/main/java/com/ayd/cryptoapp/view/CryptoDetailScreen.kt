@@ -76,8 +76,9 @@ viewModel: CryptoDetailViewModel = hiltViewModel()) {
                     modifier = Modifier
                         .padding(14.dp)
                         .size(200.dp, 200.dp)
-                        .clip(CircleShape)
-                        .border(2.dp, Color.Gray, CircleShape)
+                       // .clip(CircleShape)
+                        //.border(2.dp, Color.Gray, CircleShape)
+                        .border(2.dp, Color.Gray)
                         )
 
 
